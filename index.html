@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Twittor</title>
 
@@ -11,12 +11,37 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="js/libs/plugins/mdtoast.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
 
     <link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
+
     <link rel="manifest" href="manifest.json">
 
+    <!-- Android -->
     <meta name="theme-color" content="#3498db">
+
+    <!-- IOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+
+    <link rel="apple-touch-icon" href="img/icons/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/icons/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/icons/icon-152x152.png">
+
+    <!-- iPhone X (1125px x 2436px) -->
+    <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" href="img/icons-ios/apple-launch-1125x2436.png">
+    <!-- iPhone 8, 7, 6s, 6 (750px x 1334px) -->
+    <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="img/icons-ios/apple-launch-750x1334.png">
+    <!-- iPhone 8 Plus, 7 Plus, 6s Plus, 6 Plus (1242px x 2208px) -->
+    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)" href="img/icons-ios/apple-launch-1242x2208.png">
+    <!-- iPhone 5 (640px x 1136px) -->
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="img/icons-ios/apple-launch-640x1136.png">
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="apple-mobile-web-app-title" content="Twittor!">
 
 </head>
 <body>
@@ -25,7 +50,8 @@
             <span id="salir-btn" class="fa fa-sign-out-alt out oculto animated fadeIn"></span>
             <span id="titulo">
                 <i class="fa fa-user"></i>
-                Seleccione Personaje</span>
+                Seleccione Personaje
+            </span>
             <span id="nuevo-btn" class="fa fa-pen-square new oculto animated fadeIn fast"></span>
         </span>
         <!-- Fin Titulo -->
@@ -62,10 +88,16 @@
         </div>
         <!-- Fin Modal -->
 
-
+        
+        
         <!-- Seleccion de personaje -->
         <div id="seleccion" class="seleccion animated fadeIn fast" align="center">
-        
+            
+            <!-- Botón de notificaciones -->
+            <button class="btn-noti-activadas oculto">Notificaciones Activadas</button>
+            <button class="btn-noti-desactivadas oculto">Notificaciones Desactivadas</button>
+            <!-- Fin de boton de notificaciones -->
+
             <div>
                 <img data-user="spiderman" src="img/avatars/spiderman.jpg" alt="spiderman" class="seleccion-avatar">
             </div>
@@ -94,7 +126,7 @@
         <ul id="timeline" class="timeline oculto">
             
             <!-- Mensaje -->
-            <li class="animated fadeIn fast">
+            <!-- <li class="animated fadeIn fast">
                 <div class="avatar">
                     <img src="img/avatars/spiderman.jpg">
                 </div>
@@ -107,7 +139,7 @@
                     
                     <div class="arrow"></div>
                 </div>
-            </li>
+            </li> -->
             <!-- Fin del mensaje -->
 
         </ul>
@@ -116,7 +148,8 @@
 
       
     
-        <script src="js/libs/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/libs/plugins/mdtoast.min.js"></script>
         <script src="js/app.js"></script>
     
 </body>

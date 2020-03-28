@@ -156,7 +156,7 @@ postBtn.on('click', function() {
     }
 
 
-    fetch('/api',{
+    fetch('https://api-push-server.herokuapp.com/api',{
         method:'post',
         headers:{
             'content-Type':'application/json'
@@ -175,7 +175,7 @@ postBtn.on('click', function() {
 // Obtener mensajes del servidor
 
 function getMensajes(){
-    fetch('/api')
+    fetch('https://api-push-server.herokuapp.com/api')
     .then(data => data.json())
     .then(posts =>{
         posts.forEach(post => {
@@ -267,7 +267,7 @@ function notificame(){
 
 //optener la llave publica
 function getPublicKey(){
-    return fetch('/api/key')
+    return fetch('https://api-push-server.herokuapp.com/api/key')
     .then(res => res.arrayBuffer())
     .then(key => new Uint8Array(key));
 }
@@ -283,7 +283,7 @@ btnDesactivadas.on('click',function(){
         .then(res => res.toJSON())
         .then(suscripcion => {
 
-            fetch('/api/subscribe',{
+            fetch('https://api-push-server.herokuapp.com/api/subscribe',{
                 method:'post',
                 headers:{
                     'content-Type':'application/json'

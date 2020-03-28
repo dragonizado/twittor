@@ -27,7 +27,7 @@ function postearMensajes() {
 
             const doc = row.doc;
 
-            const fetchProm = fetch('/api', {
+            const fetchProm = fetch('https://api-push-server.herokuapp.com/api', {
                                     method: 'post',
                                     headers: {
                                         'content-Type': 'application/json'

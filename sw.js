@@ -121,13 +121,13 @@ self.addEventListener('push',e=>{
     const title = data.titulo;
     const options = {
         body:data.cuerpo,
-        icon: `img/avatars/${data.usuario}.jpg`,
-        badge: 'img/favico.ico',
+        icon: `https://dragonizado.github.io/twittor/img/avatars/${data.usuario}.jpg`,
+        badge: 'https://dragonizado.github.io/twittor/img/favico.ico',
         image: 'https://datainfox.com/wp-content/uploads/2017/10/avengers-tower.jpg',
         vibrate: [125, 75, 125, 275, 200, 275, 125, 75, 125, 275, 200, 600, 200, 600],
-        openUrl:'/',
+        openUrl:'https://dragonizado.github.io/twittor/',
         data:{
-            url:'/'
+            url:'https://dragonizado.github.io/twittor/'
         },
 
     }
